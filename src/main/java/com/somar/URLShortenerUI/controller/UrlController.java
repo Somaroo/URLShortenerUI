@@ -33,12 +33,12 @@ public class UrlController {
 
         try {
             if (!urlRepository.existsByUrl(urldto.getUrldto())) {
-                Url createUrl = urlServiceImp.createUrl(urldto);
+                urlServiceImp.createUrl(urldto);
 
                 return "index";
 
             }
-            Url updateUrl = urlServiceImp.updateUrl(urldto);
+            urlServiceImp.updateUrl(urldto);
 
             return "index";
 

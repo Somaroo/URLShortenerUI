@@ -1,6 +1,9 @@
 package com.somar.URLShortenerUI.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -8,6 +11,9 @@ import java.time.LocalDateTime;
 
 
 @Entity
+@AllArgsConstructor
+@Builder
+@NoArgsConstructor
 @Data
 public class Url implements Serializable {
 
@@ -26,5 +32,6 @@ public class Url implements Serializable {
     private LocalDateTime urlDate;
 
     private long urlCallNumber;
+
 
 }
